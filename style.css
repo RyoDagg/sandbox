@@ -1,0 +1,104 @@
+:root {
+  --color-n-1: #db504a;
+  --color-n-2: #ff6f59;
+  --color-n-3: #254441;
+  --color-n-4: #347766;
+  --color-n-5: #43aa8b;
+  --color-n-6: #7bad93;
+  --color-n: #b2b09b;
+}
+
+.flex {
+  display: flex;
+  margin: 100px 50px 0 50px;
+  justify-content: space-between;
+  gap: 50px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  background-color: rgb(147, 198, 198);
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  border-radius: 8px;
+  /* inner text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.box:nth-child(7n + 1) {
+  background-color: var(--color-n-1);
+}
+.box:nth-child(7n + 2) {
+  background-color: var(--color-n-2);
+}
+.box:nth-child(7n + 3) {
+  background-color: var(--color-n-3);
+}
+.box:nth-child(7n + 4) {
+  background-color: var(--color-n-4);
+}
+.box:nth-child(7n + 5) {
+  background-color: var(--color-n-5);
+}
+.box:nth-child(7n + 6) {
+  background-color: var(--color-n-6);
+}
+
+.box:nth-child(7n) {
+  background-color: var(--color-n);
+}
+
+.box-4 {
+  cursor: pointer;
+}
+
+.box-4 .hover-card {
+  position: absolute;
+  font-size: 18px;
+  width: 250px;
+  background-color: beige;
+  visibility: hidden;
+  opacity: 0;
+  top: 100px;
+  padding: 10px;
+  border: solid 1px #909090;
+  border-radius: 20px;
+}
+
+.box-4:hover .hover-card {
+  visibility: visible;
+  opacity: 1;
+  top: 220px;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+.box-4:active .hover-card {
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.box-4 .active-card {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  width: 250px;
+  background-color: rgba(222, 247, 255, 0.858);
+  visibility: hidden;
+  opacity: 0;
+  top: 100px;
+  padding: 20px 10px 20px 10px;
+  border: solid 1px #909090;
+  border-radius: 20px;
+}
+.box-4:active .active-card {
+  visibility: visible;
+  backdrop-filter: blur(5px);
+  opacity: 1;
+  top: 220px;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
