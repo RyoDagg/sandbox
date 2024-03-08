@@ -81,7 +81,7 @@
   top: 100px;
   padding: 10px;
   border: solid 1px #909090;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .box-4:hover .hover-card {
@@ -107,7 +107,7 @@
   top: 100px;
   padding: 20px 10px 20px 10px;
   border: solid 1px #909090;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 .box-4:active .active-card {
   visibility: visible;
